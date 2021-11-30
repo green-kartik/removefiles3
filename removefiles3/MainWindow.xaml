@@ -1,0 +1,34 @@
+﻿<Window x:Class="removefiles3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:removefiles3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<Grid >
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*" />
+			<ColumnDefinition Width="1*" />
+		</Grid.ColumnDefinitions>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="2*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="10*" />
+		</Grid.RowDefinitions>
+
+		<TextBox IsEnabled="False" Grid.Column="0" Name="NA" Grid.Row="0" Text="Enter Directory:" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+		<Button Grid.Column="0" Grid.Row="1" Click="Button_Click">List Files</Button>
+		<ScrollViewer Grid.Column="0" Grid.Row="2">
+			<TextBox Name="Files" Text="Files" TextWrapping="Wrap"/>
+		</ScrollViewer>
+
+
+		<TextBox Grid.Column="1" Grid.Row="0" Name="DirectoryPath"/>
+		<Button Grid.Column="1" Grid.Row="1" Click="Button_Click2">Detele Ok files</Button>
+		<ScrollViewer Grid.Column="1" Grid.Row="2">
+			<TextBox Name="DeletedFiles" Text="Deleted Files" TextWrapping="Wrap"/>
+		</ScrollViewer>
+	</Grid>
+</Window>
